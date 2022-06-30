@@ -1,1 +1,8 @@
-mkfile -n 49m testfile
+mkfile -n 200m testfile
+
+dd if=/dev/zero of=testfile bs=1M count=200
+
+git lfs install
+git lfs track testfile
+
+git lfs ls-files
